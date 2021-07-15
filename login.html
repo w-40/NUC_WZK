@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>教务系统登录</title>
+		<style>
+			body{
+				background-color: #1E9FFF;
+				
+			}
+			#loginDiv{
+				background-color: white;
+				width: 480px;
+				height: 420px;
+				margin: 0 auto;
+				color:#1E9FFF;
+				margin-top: 100px;
+				text-align: center;
+				padding-top: 20px;
+			}
+			#uname{
+				width: 400px;
+				height: 35px;
+				border-radius: 5px;
+				border: 1px solid gray;
+				margin-left: -30px;
+				background-color: transparent;
+				padding-left: 30px;
+				padding-bottom: 1px;
+				padding-top: 5px;
+				font-size: 20px;
+				margin-top: 20px;
+			}
+			#upsw{
+				width: 400px;
+				height: 35px;
+				border-radius: 5px;
+				border: 1px solid gray;
+				margin-left: -30px;
+				background-color: transparent;
+				padding-left: 30px;
+				margin-top: 12px;
+				padding-bottom: 1px;
+				padding-top: 5px;
+				font-size: 20px;
+				margin-bottom:-5px ;
+			}
+			#loginBtn{
+				width: 450px;
+				height 600px;
+				margin-top: 11px;
+				background-color: #1E9FFF;
+				border: 1px seashell #1E9FFF;
+				border-radius: 5px;
+				color: white;
+				margin-top: 10px;
+				font-size: 23px;
+			}
+			#check{
+				margin-top: 10px;
+				box-sizing: 15px;
+				margin-left: -342px;
+			}
+			#captcha{
+				width: 299px;
+				height: 35px;
+				border-radius: 5px;
+				border: 1px solid gray;
+				margin-left: -161px;
+				background-color: transparent;
+				padding-left: 30px;
+				margin-top: 12px;
+				padding-bottom: 1px;
+				padding-top: 5px;
+				font-size: 20px;
+				margin-bottom:-5px ;
+			}
+			#pic4{
+				margin-top:-35px ;
+				float: left;
+				margin-left: 355px;
+			}
+			#pic3{
+				margin-left: 20px;
+				margin-top:20px ;
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="receive.html">
+		<div id="loginDiv">
+			<h1>UOLab联合开放实验室</h1>
+			<h1>管理平台</h1>
+			<img id="pic1" src="images/user.jpg">
+			<input placeholder="用户名" type="text" id="uname" name="username">
+			<br>
+			<img id="pic2" src="images/password.jpg">
+			<input placeholder="密码" type="password" id="upsw" name="uspaw">
+			<br>
+			<div>
+				<div><img id="pic3" src="images/code.jpg"></div>
+				<input placeholder="验证码" type="text" id="captcha" name="captcha">
+				<div>
+				<div><img id="pic4" src="images/captcha.jpg"></div>
+				</div>
+			</div>
+			<br>
+			<font size="4" color=#808080><input type="checkbox" id="check"  name="mempaw">记住密码</font>
+			<br>
+			<button id="loginBtn" type="submit">登录</button>
+		</div></form>
+	</body>
+</html>
