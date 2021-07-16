@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网上银行-个人存款在线计算器</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container text-center">
+			<h1>个人网银-个人存款计算</h1>
+			<table class="table table-bordered text-center">
+				<tr class="bg-primary"><!--背景变蓝-->          
+					<td colspan="2">个人存款计算器</td>
+				</tr>
+				<tr>
+					<td>存款金额</td>
+					<td>
+						<input class="form-control" type="text" id="amount" placeholder="请输入存款金额">
+					</td>
+				</tr>
+				<tr>
+					<td>存款年限</td>
+					<td>
+						<select id="year" class="form-control">
+							<option value="0.0175">一年（1.75%）</option>
+							<option value="0.0225">两年（2.25%）</option>
+							<option value="0.0275">三年（2.75%）</option>
+							<option value="0.0275">五年（2.75%）</option>
+							<!--value是给程序看的，用于和后端交互使用-->
+						</select>
+					</td>		
+				</tr>
+				<tr>
+					<td>所得利息</td>
+					<td>
+						<input type="text" id="tax" class="form-control" readonly="readonly">
+					</td>
+				</tr>
+				<tr>
+					<td>本息合计</td>
+					<td>
+						<input type="text" id="total" class="form-control" readonly="readonly">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button class="btn btn-primary btn-block">计算</button>
+					</td>
+				</tr>
+			</table>
+			开发者：2013040431 王志凯 中北大学软件学院2020级
+		</div>
+	</body>
+</html>
