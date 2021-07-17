@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人社保计算</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container text-center">
+			<img src="中北大学logo(红).jpg" class="img-circle" width="100px" height="100px">
+			<table class="table table-bordered text-center">
+				<tr>
+					<td>工资</td>
+					<td colspan="3">
+						<input type="text" id="salary" placeholder="请输入工资" class="form-control">
+					</td>
+					<td>
+						<button class="btn btn-danger btn-block">计算</button>
+					</td>
+				</tr>
+				<tr class="bg-primary">
+					<td>险种</td>
+					<td>个人%</td>
+					<td>个人</td>
+					<td>公司%</td>
+					<td>公司</td>
+				</tr>
+				<tr>
+					<td>养老</td>
+					<td>8%</td>
+					<td></td>
+					<td>20%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>医疗</td>
+					<td>2%</td>
+					<td></td>
+					<td>6%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>失业</td>
+					<td>0.5%</td>
+					<td></td>
+					<td>1.5%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>工伤</td>
+					<td></td>
+					<td></td>
+					<td>0.5%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>生育</td>
+					<td></td>
+					<td></td>
+					<td>0.8%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<!--公积金买房贷款便宜-->
+					<td>公积金</td>
+					<td>12%</td>
+					<td></td>
+					<td>12%</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>合计</td>
+					<td>个人合计</td>
+					<td></td>
+					<td>公司合计</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>总额</td>
+					<td colspan="4"></td>
+				</tr>
+			</table>
+			开发者：王志凯  中北大学软件学院小学期实训 执行单位：英才科技有限公司
+		</div>
+	</body>
+</html>
