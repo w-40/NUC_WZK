@@ -15,8 +15,19 @@
 	<script>
 		//定义一个函数，完成存款计算
 		function calc(){
+			//一开始处，做表单验证，判断输入的是不是数字
+			
 			//1.获取存款金额
 			var cunkuanjine = document.getElementById("amount").value;   //document代表整个网页value是值
+			//定义一个正则表达式（规则表达式），假设我们要求存款金额是六位数
+			var regExp = /^[0-9]{2,6}$/;//正则表达式语法,0-9是只能是数字，2,6是最多六位，最少两万
+			if(!regExp.test(cunkuanjine)){
+				//能到此处，说明输入不合法
+				document.getElementById("amount").value="输入不合法，必须是2-6位数字";
+				document.getElementById("amount").style="color:red";
+				return;//阻止程序继续进行
+			}
+			
 			//上面那句话取到的值是"8000",不能做计算
 			var countnum = parseInt(cunkuanjine);//字符串转成整数
 			//2.开始计算
@@ -28,6 +39,10 @@
 			//3.把计算的结果写入对应文本框，用户可看到
 			document.getElementById("lixi").value = lixi;
 			document.getElementById("total").value = total;
+		}
+		function clearContent(){
+			document.getElementById("amount").value='';
+			document.getElementById("amount").style="color:black";
 		}
 	</script>
 	</head>
@@ -41,7 +56,7 @@
 				<tr>
 					<td>存款金额</td>
 					<td>
-						<input class="form-control" type="text" id="amount" placeholder="请输入存款金额">
+						<input onfocus="clearContent()" class="form-control" type="text" id="amount" placeholder="请输入存款金额">
 					</td>
 				</tr>
 				<tr>
@@ -49,9 +64,9 @@
 					<td>
 						<select id="year" class="form-control">
 							<option value="0.0175">一年（1.75%）</option>
-							<option value="0.0225">两年（2.25%）</option>
-							<option value="0.0275">三年（2.75%）</option>
-							<option value="0.0275">五年（2.75%）</option>
+							<option value="0.045">两年（2.25%）</option>
+							<option value="0.0825">三年（2.75%）</option>
+							<option value="0.1375">五年（2.75%）</option>
 							<!--value是给程序看的，用于和后端交互使用-->
 						</select>
 					</td>		

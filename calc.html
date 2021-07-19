@@ -11,7 +11,58 @@
  
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	</head>
+<script>
+	function jisuan(){
+		//1.获得工资，看输入合法吗？表单验证
+		var sal = document.getElementById("salary").value;
+		//判断工资输入合法吗?正则表达式，规定输入的数字4-5位
+		var regExp = /^[0-9]{4,5}$/;
+		if(!regExp.test(sal)){
+			document.getElementById("salary").value="必须输入4-5位数字";
+			document.getElementById("salary").style = "color:red"
+			return;
+		}
+		var salNum = parseInt(sal);
+		var ylgr = salNum * 0.08;
+		var ylgs = salNum * 0.2;
+		document.getElementById("ylgr").innerHTML = ylgr;
+		document.getElementById("ylgs").innerText = ylgs;
+		
+		var ybgr = salNum * 0.02;
+		var ybgs = salNum * 0.06;
+		document.getElementById("ybgr").innerText = ybgr;
+		document.getElementById("ybgs").innerText = ybgs;
+		
+		var sygr = salNum * 0.005;
+		var sygs = salNum * 0.015;
+		document.getElementById("sygr").innerText = sygr;
+		document.getElementById("sygs").innerText = sygs;
+		
+		var gongshang = salNum * 0.005;
+		document.getElementById("gongshang").innerHTML=gongshang;
+		
+		var shengyu = salNum * 0.008;
+		document.getElementById("shengyu").innerHTML= shengyu;
+		
+		var gjjgr = salNum * 0.12;
+		var gjjgs = salNum * 0.12;
+		document.getElementById("gjjgr").innerHTML = gjjgr;
+		document.getElementById("gjjgs").innerHTML = gjjgs;
+		
+		grhj = ylgr + ybgr + sygr + gjjgr;
+		gshj = ylgs + ybgs + sygs + gongshang + shengyu + gjjgs;
+		document.getElementById("grhj").innerHTML = grhj;
+		document.getElementById("gshj").innerHTML = gshj;
+		
+		var zonge = salNum + gshj;
+		document.getElementById("total").innerHTML = zonge;
+	}
+	function clearTxt(){
+		document.getElementById("salary").value="";
+		document.getElementById("salary").style="color:black";
+	}
+</script>
+</head>
 	<body>
 		<div class="container text-center">
 			<img src="中北大学logo(红).jpg" class="img-circle" width="100px" height="100px">
@@ -19,10 +70,10 @@
 				<tr>
 					<td>工资</td>
 					<td colspan="3">
-						<input type="text" id="salary" placeholder="请输入工资" class="form-control">
+						<input onfocus="clearTxt()" type="text" id="salary" placeholder="请输入工资" class="form-control">
 					</td>
 					<td>
-						<button class="btn btn-danger btn-block">计算</button>
+						<button onclick="jisuan()" class="btn btn-danger btn-block">计算</button>
 					</td>
 				</tr>
 				<tr class="bg-primary">
@@ -35,56 +86,56 @@
 				<tr>
 					<td>养老</td>
 					<td>8%</td>
-					<td></td>
+					<td id="ylgr"></td>
 					<td>20%</td>
-					<td></td>
+					<td id="ylgs"></td>
 				</tr>
 				<tr>
 					<td>医疗</td>
 					<td>2%</td>
-					<td></td>
+					<td id="ybgr"></td>
 					<td>6%</td>
-					<td></td>
+					<td id="ybgs"></td>
 				</tr>
 				<tr>
 					<td>失业</td>
 					<td>0.5%</td>
-					<td></td>
+					<td id="sygr"></td>
 					<td>1.5%</td>
-					<td></td>
+					<td id="sygs"></td>
 				</tr>
 				<tr>
 					<td>工伤</td>
 					<td></td>
 					<td></td>
 					<td>0.5%</td>
-					<td></td>
+					<td id="gongshang"></td>
 				</tr>
 				<tr>
 					<td>生育</td>
 					<td></td>
 					<td></td>
 					<td>0.8%</td>
-					<td></td>
+					<td id="shengyu"></td>
 				</tr>
 				<tr>
 					<!--公积金买房贷款便宜-->
 					<td>公积金</td>
 					<td>12%</td>
-					<td></td>
+					<td id="gjjgr"></td>
 					<td>12%</td>
-					<td></td>
+					<td id="gjjgs"></td>
 				</tr>
 				<tr>
 					<td>合计</td>
 					<td>个人合计</td>
-					<td></td>
+					<td id="grhj"></td>
 					<td>公司合计</td>
-					<td></td>
+					<td id="gshj"></td>
 				</tr>
 				<tr>
 					<td>总额</td>
-					<td colspan="4"></td>
+					<td colspan="4" id="total"></td>
 				</tr>
 			</table>
 			开发者：王志凯  中北大学软件学院小学期实训 执行单位：英才科技有限公司
