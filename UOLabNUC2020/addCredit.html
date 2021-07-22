@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/select.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="js/select-ui.min.js"></script>
+		<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+		<script type="text/javascript">
+			KE.show({
+				id: 'content7',
+				cssPath: './index.css'
+			});
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$(".select1").uedSelect({
+					width: 345
+				});
+				$(".select2").uedSelect({
+					width: 167
+				});
+				$(".select3").uedSelect({
+					width: 100
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">录入学分</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="formbody">
+			<div id="tab1" class="tabson">
+				<ul class="forminfo">
+					<li>
+						<label>姓名<b>*</b></label>
+						<input placeholder="2-5个汉字" name="classid" type="text" class="dfinput" style="width:345px;" />
+						<i id="usernameTip"></i>
+					</li>
+					<li>
+						<label>学号<b>*</b></label>
+						<input name="Input" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>年级<b>*</b></label><cite>
+       	<input name="state" type="radio" value="" checked="checked" />大一&nbsp;&nbsp;&nbsp;&nbsp;
+       	<input name="state" type="radio" value="" />大二
+		<input name="state" type="radio" value="" />大三		
+		<input name="state" type="radio" value="" />大四	
+						</cite>
+					</li>
+					<li><label>院系</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>软件学院</option>
+								<option>大数据学院</option>
+								<option>理学院</option>
+							</select>
+						</div>
+					</li>
+
+					<li>
+						<label>分值<b>*</b></label>
+						<input placeholder="请输入分值" name="Input" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>事由<b>*</b></label>
+						<input placeholder="请输入事由" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>取得时间<b>*</b></label>
+						<input placeholder="请输入取得时间（年-月）" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>录入时间<b>*</b></label>
+						<input placeholder="请输入录入时间（年-月-日）" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>录入人<b>*</b></label>
+						<input placeholder="请输入录入人" name="Input" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li><label>备注<b>*</b></label>
+
+						<textarea id="content7" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>
+					</li>
+					<li><label>&nbsp;</label><input name="" type="button" class="btn" value="保存成员" /></li>
+				</ul>
+
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			$("#usual1 ul").idTabs();
+		</script>
+
+		<script type="text/javascript">
+			$('.tablelist tbody tr:odd').addClass('odd');
+		</script>
+		</div>
+	</body>
+
+</html>

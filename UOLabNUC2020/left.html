@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script language="JavaScript" src="js/jquery.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				//导航切换
+				$(".menuson .header").click(function() {
+					var $parent = $(this).parent();
+					$(".menuson>li.active").not($parent).removeClass("active open").find('.sub-menus').hide();
+
+					$parent.addClass("active");
+					if(!!$(this).next('.sub-menus').size()) {
+						if($parent.hasClass("open")) {
+							$parent.removeClass("open").find('.sub-menus').hide();
+						} else {
+							$parent.addClass("open").find('.sub-menus').show();
+						}
+
+					}
+				});
+
+				// 三级菜单点击
+				$('.sub-menus li').click(function(e) {
+					$(".sub-menus li.active").removeClass("active")
+					$(this).addClass("active");
+				});
+
+				$('.title').click(function() {
+					var $ul = $(this).next('ul');
+					$('dd').find('.menuson').slideUp();
+					if($ul.is(':visible')) {
+						$(this).next('.menuson').slideUp();
+					} else {
+						$(this).next('.menuson').slideDown();
+					}
+				});
+			})
+		</script>
+
+	</head>
+
+	<body style="background:#fff3e1;">
+		<div class="lefttop"><span></span>UOLab管理系统</div>
+
+		<dl class="leftmenu">
+
+			<!--管理信息模块开始-->
+			<dd>
+				<div class="title">
+					<span><img src="images/leftico01.png" /></span>用户管理
+				</div>
+				<ul class="menuson">
+					<li><cite></cite>
+						<a href="addUser.html" target="rightFrame">添加用户</a><i></i></li>
+					<li class="active"><cite></cite>
+						<a href="modifyUser.html" target="rightFrame" title="right.html">修改用户</a><i></i></li>
+					<li><cite></cite>
+						<a href="deleteUser.html" target="rightFrame" title="displayStudents">删除用户</a><i></i></li>
+					<li><cite></cite>
+						<a href="findUser.html" target="rightFrame" title="tools.html">查询用户</a><i></i></li>
+				</ul>
+			</dd>
+			<!--管理信息模块结束-->
+
+			<!--其他设置模块开始-->
+			<dd>
+				<div class="title">
+					<span><img src="images/leftico02.png" /></span>院系管理
+				</div>
+				<ul class="menuson">
+					<li><cite></cite>
+						<a href="addDept.html" target="rightFrame" title="project.html">添加院系</a><i></i></li>
+					<li><cite></cite>
+						<a href="addMajor.html" target="rightFrame" title="search.html">添加专业</a><i></i></li>
+					
+				</ul>
+			</dd>
+			<!--其他设置模块结束-->
+
+			<dd>
+				<div class="title">
+					<span><img src="images/leftico02.png" /></span>成员管理
+				</div>
+				<ul class="menuson">
+					<li><cite></cite>
+						<a href="addMember.html" target="rightFrame" title="project.html">添加成员</a><i></i></li>
+					<li><cite></cite>
+						<a href="modifyMember.html" target="rightFrame" title="search.html">修改成员</a><i></i></li>
+					<li><cite></cite>
+						<a href="findMember.html" target="rightFrame" title="search.html">查询成员</a><i></i></li>
+					<li><cite></cite>
+						<a href="totalMember.html" target="rightFrame" title="search.html">成员统计</a><i></i></li>
+				</ul>
+			</dd>
+
+			<!--编辑器模块开始-->
+			<dd>
+				<div class="title"><span><img src="images/leftico03.png" /></span>公开课管理</div>
+				<ul class="menuson">
+					<li><cite></cite>
+						<a href="addClass.html" target="rightFrame" title="project.html">录入公开课</a><i></i></li>
+					<li><cite></cite>
+						<a href="findClass.html" target="rightFrame" title="search.html">公开课查询</a><i></i></li>
+				</ul>
+			</dd>
+			<!--编辑器模块结束-->
+
+			<dd>
+				<div class="title"><span><img src="images/leftico04.png" /></span>参赛管理</div>
+				<ul class="menuson">
+				<li><cite></cite>
+						<a href="addRace.html" target="rightFrame" title="project.html">参数信息录入</a><i></i></li>
+					<li><cite></cite>
+						<a href="modifyRace.html" target="rightFrame" title="search.html">参赛信息修改</a><i></i></li>
+					<li><cite></cite>
+						<a href="findRace.html" target="rightFrame" title="search.html">查询参赛信息</a><i></i></li>
+				</ul>
+			</dd>
+
+			<dd>
+				<div class="title"><span><img src="images/leftico04.png" /></span>创新学分管理</div>
+				<ul class="menuson">
+					<li><cite></cite>
+						<a href="addCredit.html" target="rightFrame" title="project.html">录入学分</a><i></i></li>
+					<li><cite></cite>
+						<a href="findCredit.html" target="rightFrame" title="search.html">学分查询</a><i></i></li>
+					<li><cite></cite>
+						<a href="totalCredit.html" target="rightFrame" title="search.html">学分统计</a><i></i></li>
+				</ul>
+				</ul>
+			</dd>
+
+		</dl>
+
+	</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/select.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="js/select-ui.min.js"></script>
+		<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+		<script type="text/javascript">
+			KE.show({
+				id: 'content7',
+				cssPath: './index.css'
+			});
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$(".select1").uedSelect({
+					width: 345
+				});
+				$(".select2").uedSelect({
+					width: 167
+				});
+				$(".select3").uedSelect({
+					width: 100
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">添加成员</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="formbody">
+			<div id="tab1" class="tabson">
+				<ul class="forminfo">
+					<li>
+						<label>姓名<b>*</b></label>
+						<input placeholder="2-5个汉字" name="classid" type="text" class="dfinput" style="width:345px;" />
+						<i id="usernameTip"></i>
+					</li>
+					<li>
+						<label>学号<b>*</b></label>
+						<input name="Input" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>性别<b>*</b></label><cite>
+       	<input name="sex" type="radio" value="" checked="checked" />男&nbsp;&nbsp;&nbsp;&nbsp;
+       	<input name="sex" type="radio" value="" />女</cite>
+					</li>
+					<li>
+						<label>年级<b>*</b></label><cite>
+       	<input name="state" type="radio" value="" checked="checked" />大一&nbsp;&nbsp;&nbsp;&nbsp;
+       	<input name="state" type="radio" value="" />大二
+		<input name="state" type="radio" value="" />大三		
+		<input name="state" type="radio" value="" />大四	
+						</cite>
+
+					</li>
+
+					<li>
+						<label>籍贯<b>*</b></label>
+						<input placeholder="省-市-区" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>电话<b>*</b></label>
+						<input name="Input" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li><label>院系</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>软件学院</option>
+								<option>大数据学院</option>
+								<option>理学院</option>
+							</select>
+						</div>
+					</li>
+					<li><label>专业</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>软件工程</option>
+								<option>应用数学</option>
+								<option>物联网</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<label>校内职务<b>*</b></label>
+						<input placeholder="请输入校内职务，可选" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>加入日期<b>*</b></label>
+						<input placeholder="请输入加入日期" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li><label>状态</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>正常</option>
+								<option>退出</option>
+								<option>毕业</option>
+							</select>
+						</div>
+					</li>
+					<li><label>担任的实验室职务</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>秘书长</option>
+								<option>副秘书长</option>
+								<option>技术总监</option>
+								<option>项目经理监</option>
+								<option>组长</option>
+							</select>
+						</div>
+					</li>
+					<li><label>备注<b>*</b></label>
+
+						<textarea id="content7" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>
+					</li>
+					<li><label>&nbsp;</label><input name="" type="button" class="btn" value="保存成员" /></li>
+				</ul>
+
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			$("#usual1 ul").idTabs();
+		</script>
+
+		<script type="text/javascript">
+			$('.tablelist tbody tr:odd').addClass('odd');
+		</script>
+		</div>
+	</body>
+
+</html>
